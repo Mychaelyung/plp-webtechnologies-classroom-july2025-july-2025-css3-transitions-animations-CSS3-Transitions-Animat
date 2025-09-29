@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Portfolio - CSS3 & JavaScript Integration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background particles -->
+    <div class="bg-particles" id="particles"></div>
+
+    <!-- Header Section -->
+    <header>
+      <h1>Dynamic Portfolio Showcase</h1>
+      <p class="subtitle">CSS3 Animations + JavaScript Functions Integration</p>
+    </header>
+
+    <div class="container">
+      <!-- Interactive Buttons -->
+      <section>
+        <h2 style="color: white; text-align: center; margin: 2rem 0">
+          Interactive Controls
+        </h2>
+        <div style="text-align: center">
+          <button class="btn" onclick="triggerCardFlip()">
+            Flip All Cards
+          </button>
+          <button class="btn" onclick="animateProgress()">
+            Animate Progress
+          </button>
+          <button class="btn" onclick="showModal()">Open Modal</button>
+          <button class="btn" onclick="toggleLoader()">Toggle Loader</button>
+          <button class="btn" onclick="addPulseEffect()">
+            Add Pulse Effect
+          </button>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section class="cards-container">
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">🎨</div>
+              <h3>CSS Animations</h3>
+              <p>Beautiful transitions and keyframe animations</p>
+            </div>
+            <div class="card-back">
+              <h3>Animated Features</h3>
+              <p>
+                ✨ Smooth transitions<br />🎭 Keyframe animations<br />🎪
+                Transform effects<br />💫 Interactive responses
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">⚡</div>
+              <h3>JavaScript Functions</h3>
+              <p>Smart functions with scope and parameters</p>
+            </div>
+            <div class="card-back">
+              <h3>Function Features</h3>
+              <p>
+                🔧 Custom parameters<br />↩️ Return values<br />🌐 Global/Local
+                scope<br />🔄 Reusable logic
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-icon">🚀</div>
+              <h3>Dynamic Integration</h3>
+              <p>CSS animations triggered by JavaScript</p>
+            </div>
+            <div class="card-back">
+              <h3>Integration Magic</h3>
+              <p>
+                🎯 Event-driven animations<br />🎪 Class manipulation<br />⚡
+                Real-time effects<br />🎨 Dynamic styling
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Progress Bars -->
+      <section class="progress-section">
+        <h2 style="color: white; margin-bottom: 1rem">
+          Animated Progress Bars
+        </h2>
+        <div class="progress-item">
+          <div class="progress-label">HTML/CSS Mastery</div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label">JavaScript Proficiency</div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="40"></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label">Animation Skills</div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="50"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Loader -->
+      <div class="loader" id="loader"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="hideModal()">&times;</span>
+        <h2>🎉 Animation Demo Complete!</h2>
+        <p>
+          This modal demonstrates CSS slide-in animations triggered by
+          JavaScript functions with proper scope management.
+        </p>
+        <button class="btn" onclick="hideModal()">Close Modal</button>
+      </div>
+    </div>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
+  </body>
+</html>
